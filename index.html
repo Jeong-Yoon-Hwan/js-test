@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    *{margin:0;padding:0;box-sizing: border-box;list-style: none;}
+    #root{
+      width:100vw;
+      height:100vh;
+      background-color: #333;
+    }
+    #root > header {
+      width:100vw;
+      height:5vh;
+      /* background-color: white; */
+      display: flex;
+      justify-content: space-around;
+      align-items:center;
+    }
+    #root > header > ul {
+      display: flex;
+      gap:10vw;
+      color:white;
+      opacity: 0;
+    }
+  </style>
+</head>
+<body>
+  <div id="root">
+    <header>
+      <ul>
+        <li>about</li>
+        <li>menu-1</li>
+        <li>menu-2</li>
+        <li>menu-3</li>
+        <li>menu-4</li>
+      </ul>
+    </header>
+  </div>
+
+  <script>
+    const menu = document.querySelector("#root > header > ul");
+    console.log(menu);
+    
+    const opacityCount = 0;
+    let timer = setTimeout(function(){
+      menu.style.opacity="1";
+      menu.style.transition='1s';
+    },1000);
+  </script>
+</body>
+</html>
